@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Showcase</title>
+</head>
+<body>
+    <h1>Project Showcase</h1>
+
+
+
+    <div class="projects">
+        {% for project in projects %}
+            <div class="project">
+                <h2>{{ project.title }}</h2>
+                <img src="{{ project.image.url }}" alt="{{ project.title }}" style="width:200px;">
+                <p>{{ project.description }}</p>
+                {% if project.link %}
+                    <a href="{{ project.link }}" target="_blank">View Project</a>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+</body>
+</html>
